@@ -1,0 +1,474 @@
+<https://w3id.org/core-activity-ontology/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/core-activity-ontology/> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/MON/time.owl> .
+<https://w3id.org/core-activity-ontology/> <http://purl.org/dc/elements/1.1/description> "This ontology defines core concepts and their relations to represent activities knowledge within an organization."@en .
+<https://w3id.org/core-activity-ontology/> <http://purl.org/dc/elements/1.1/licence> "https://creativecommons.org/licenses/by/4.0/" .
+<https://w3id.org/core-activity-ontology/> <http://purl.org/dc/elements/1.1/title> "Core Activity Ontology" .
+<https://w3id.org/core-activity-ontology/> <http://purl.org/dc/terms/created> "2023-12-15"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/core-activity-ontology/> <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0002-6085-6818> .
+<https://w3id.org/core-activity-ontology/> <http://purl.org/dc/terms/creator> <mailto:sss.sonfack@gmail.com> .
+<https://w3id.org/core-activity-ontology/> <http://purl.org/dc/terms/creator> <mailto:sss.sounchio@gmail.com> .
+<https://w3id.org/core-activity-ontology/> <http://www.w3.org/2000/01/rdf-schema#label> "CAO" .
+<https://w3id.org/core-activity-ontology/> <http://www.w3.org/2002/07/owl#versionInfo> "1.1" .
+<https://w3id.org/core-activity-ontology/> <http://www.w3.org/2004/02/skos/core#changeNote> "2024-06-29 change # to / and revision of temporality management"@en .
+<https://w3id.org/core-activity-ontology/> <http://www.w3.org/2004/02/skos/core#changeNote> "2024-07-03 use and import https://w3id.org/MON/time.owl time ontology which is a reduced version of the owl time ontology"@en .
+<https://w3id.org/core-activity-ontology/> <http://www.w3.org/2004/02/skos/core#changeNote> "2025-09-07 changing the private namespace to a public namespace from w3id"@en .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/licence
+<http://purl.org/dc/elements/1.1/licence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#changeNote
+<http://www.w3.org/2004/02/skos/core#changeNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/MON/time.owl#atTime
+<https://w3id.org/MON/time.owl#atTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/MON/time.owl#atTime> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRegion> .
+<https://w3id.org/MON/time.owl#atTime> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/MON/time.owl#TemporalEntity> .
+<https://w3id.org/MON/time.owl#atTime> <http://www.w3.org/2000/01/rdf-schema#comment> "It associates something with a temporal entity (for any reason)."@en .
+<https://w3id.org/MON/time.owl#atTime> <http://www.w3.org/2000/01/rdf-schema#label> "at time"@en .
+# 
+# https://w3id.org/MON/time.owl#hasBeginning
+<https://w3id.org/MON/time.owl#hasBeginning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/MON/time.owl#hasBeginning> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRegion> .
+<https://w3id.org/MON/time.owl#hasBeginning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/MON/time.owl#hasBeginning> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/MON/time.owl#Interval> .
+<https://w3id.org/MON/time.owl#hasBeginning> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/MON/time.owl#Instant> .
+<https://w3id.org/MON/time.owl#hasBeginning> <http://www.w3.org/2000/01/rdf-schema#comment> "It associates an Interval with the Instant when it begins."@en .
+<https://w3id.org/MON/time.owl#hasBeginning> <http://www.w3.org/2000/01/rdf-schema#label> "has beginning"@en .
+# 
+# https://w3id.org/MON/time.owl#hasEnd
+<https://w3id.org/MON/time.owl#hasEnd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/MON/time.owl#hasEnd> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRegion> .
+<https://w3id.org/MON/time.owl#hasEnd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/MON/time.owl#hasEnd> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/MON/time.owl#Interval> .
+<https://w3id.org/MON/time.owl#hasEnd> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/MON/time.owl#Instant> .
+<https://w3id.org/MON/time.owl#hasEnd> <http://www.w3.org/2000/01/rdf-schema#comment> "It associates an Interval with the Instant when it ends."@en .
+<https://w3id.org/MON/time.owl#hasEnd> <http://www.w3.org/2000/01/rdf-schema#label> "has end"@en .
+# 
+# https://w3id.org/core-activity-ontology/carriesOut
+<https://w3id.org/core-activity-ontology/carriesOut> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/core-activity-ontology/carriesOut> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/core-activity-ontology/isCarriedOutBy> .
+<https://w3id.org/core-activity-ontology/carriesOut> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/core-activity-ontology/Subject> .
+<https://w3id.org/core-activity-ontology/carriesOut> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/core-activity-ontology/Activity> .
+<https://w3id.org/core-activity-ontology/carriesOut> <http://www.w3.org/2000/01/rdf-schema#comment> "A subject carries out an action or operations"@en .
+<https://w3id.org/core-activity-ontology/carriesOut> <http://www.w3.org/2000/01/rdf-schema#label> "carries out" .
+# 
+# https://w3id.org/core-activity-ontology/follows
+<https://w3id.org/core-activity-ontology/follows> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/core-activity-ontology/follows> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://w3id.org/core-activity-ontology/follows> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/core-activity-ontology/Activity> .
+<https://w3id.org/core-activity-ontology/follows> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/core-activity-ontology/Activity> .
+<https://w3id.org/core-activity-ontology/follows> <http://www.w3.org/2000/01/rdf-schema#comment> "An activity follows another activity"@en .
+<https://w3id.org/core-activity-ontology/follows> <http://www.w3.org/2000/01/rdf-schema#label> "follows" .
+# 
+# https://w3id.org/core-activity-ontology/hasBeginTime
+<https://w3id.org/core-activity-ontology/hasBeginTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/core-activity-ontology/hasBeginTime> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/core-activity-ontology/hasTime> .
+<https://w3id.org/core-activity-ontology/hasBeginTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/core-activity-ontology/Activity> .
+<https://w3id.org/core-activity-ontology/hasBeginTime> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/MON/time.owl#Instant> .
+<https://w3id.org/core-activity-ontology/hasBeginTime> <http://www.w3.org/2000/01/rdf-schema#comment> "An activity, an action or and operation has be begining time"@en .
+<https://w3id.org/core-activity-ontology/hasBeginTime> <http://www.w3.org/2000/01/rdf-schema#label> "has beginning time" .
+# 
+# https://w3id.org/core-activity-ontology/hasConstraint
+<https://w3id.org/core-activity-ontology/hasConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/core-activity-ontology/hasConstraint> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/core-activity-ontology/Activity> .
+<https://w3id.org/core-activity-ontology/hasConstraint> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/core-activity-ontology/Constraint> .
+<https://w3id.org/core-activity-ontology/hasConstraint> <http://www.w3.org/2000/01/rdf-schema#comment> "An activity has a constraint"@en .
+<https://w3id.org/core-activity-ontology/hasConstraint> <http://www.w3.org/2000/01/rdf-schema#label> "has constraint" .
+# 
+# https://w3id.org/core-activity-ontology/hasEndTime
+<https://w3id.org/core-activity-ontology/hasEndTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/core-activity-ontology/hasEndTime> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/core-activity-ontology/hasTime> .
+<https://w3id.org/core-activity-ontology/hasEndTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/core-activity-ontology/Activity> .
+<https://w3id.org/core-activity-ontology/hasEndTime> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/MON/time.owl#Instant> .
+<https://w3id.org/core-activity-ontology/hasEndTime> <http://www.w3.org/2000/01/rdf-schema#comment> "An activity, an action or and operation has an end time"@en .
+<https://w3id.org/core-activity-ontology/hasEndTime> <http://www.w3.org/2000/01/rdf-schema#label> "has end time" .
+# 
+# https://w3id.org/core-activity-ontology/hasGoal
+<https://w3id.org/core-activity-ontology/hasGoal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/core-activity-ontology/hasGoal> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/core-activity-ontology/Action> .
+<https://w3id.org/core-activity-ontology/hasGoal> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/core-activity-ontology/Goal> .
+<https://w3id.org/core-activity-ontology/hasGoal> <http://www.w3.org/2000/01/rdf-schema#comment> "An action has a goal"@en .
+<https://w3id.org/core-activity-ontology/hasGoal> <http://www.w3.org/2000/01/rdf-schema#label> "has goal" .
+# 
+# https://w3id.org/core-activity-ontology/hasLocation
+<https://w3id.org/core-activity-ontology/hasLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/core-activity-ontology/hasLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/core-activity-ontology/Activity> .
+<https://w3id.org/core-activity-ontology/hasLocation> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/core-activity-ontology/Location> .
+<https://w3id.org/core-activity-ontology/hasLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a domain to a geographical position"@en .
+<https://w3id.org/core-activity-ontology/hasLocation> <http://www.w3.org/2000/01/rdf-schema#label> "has location" .
+# 
+# https://w3id.org/core-activity-ontology/hasObjective
+<https://w3id.org/core-activity-ontology/hasObjective> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/core-activity-ontology/hasObjective> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/core-activity-ontology/Activity> .
+<https://w3id.org/core-activity-ontology/hasObjective> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/core-activity-ontology/Object> .
+<https://w3id.org/core-activity-ontology/hasObjective> <http://www.w3.org/2000/01/rdf-schema#comment> "The outcome of an activity"@en .
+<https://w3id.org/core-activity-ontology/hasObjective> <http://www.w3.org/2000/01/rdf-schema#label> "has object" .
+# 
+# https://w3id.org/core-activity-ontology/hasRule
+<https://w3id.org/core-activity-ontology/hasRule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/core-activity-ontology/hasRule> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/core-activity-ontology/Activity> .
+<https://w3id.org/core-activity-ontology/hasRule> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/core-activity-ontology/Rule> .
+<https://w3id.org/core-activity-ontology/hasRule> <http://www.w3.org/2000/01/rdf-schema#comment> "An activity is governed by a rule"@en .
+<https://w3id.org/core-activity-ontology/hasRule> <http://www.w3.org/2000/01/rdf-schema#label> "has rule" .
+# 
+# https://w3id.org/core-activity-ontology/hasSubject
+<https://w3id.org/core-activity-ontology/hasSubject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/core-activity-ontology/hasSubject> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/core-activity-ontology/isSubjectOf> .
+<https://w3id.org/core-activity-ontology/isSubjectOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/core-activity-ontology/hasSubject> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/core-activity-ontology/Activity> .
+<https://w3id.org/core-activity-ontology/hasSubject> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/core-activity-ontology/Subject> .
+<https://w3id.org/core-activity-ontology/hasSubject> <http://www.w3.org/2000/01/rdf-schema#comment> "A subject carries out an activity"@en .
+<https://w3id.org/core-activity-ontology/hasSubject> <http://www.w3.org/2000/01/rdf-schema#label> "has subject" .
+# 
+# https://w3id.org/core-activity-ontology/hasTime
+<https://w3id.org/core-activity-ontology/hasTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/core-activity-ontology/hasTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/core-activity-ontology/Activity> .
+<https://w3id.org/core-activity-ontology/hasTime> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/MON/time.owl#Interval> .
+<https://w3id.org/core-activity-ontology/hasTime> <http://www.w3.org/2000/01/rdf-schema#comment> "An activity, action  has a time corresponding to when it started"@en .
+<https://w3id.org/core-activity-ontology/hasTime> <http://www.w3.org/2000/01/rdf-schema#label> "has time"@en .
+# 
+# https://w3id.org/core-activity-ontology/isAfter
+<https://w3id.org/core-activity-ontology/isAfter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/core-activity-ontology/isAfter> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/core-activity-ontology/isBefore> .
+<https://w3id.org/core-activity-ontology/isAfter> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/core-activity-ontology/Activity> .
+<https://w3id.org/core-activity-ontology/isAfter> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/MON/time.owl#Instant> .
+<https://w3id.org/core-activity-ontology/isAfter> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/core-activity-ontology/Activity> .
+<https://w3id.org/core-activity-ontology/isAfter> <http://www.w3.org/2000/01/rdf-schema#comment> "An activity can come after another activity"@en .
+<https://w3id.org/core-activity-ontology/isAfter> <http://www.w3.org/2000/01/rdf-schema#label> "is after" .
+# 
+# https://w3id.org/core-activity-ontology/isBefore
+<https://w3id.org/core-activity-ontology/isBefore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/core-activity-ontology/isBefore> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/core-activity-ontology/Activity> .
+<https://w3id.org/core-activity-ontology/isBefore> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/MON/time.owl#Instant> .
+<https://w3id.org/core-activity-ontology/isBefore> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/core-activity-ontology/Activity> .
+<https://w3id.org/core-activity-ontology/isBefore> <http://www.w3.org/2000/01/rdf-schema#comment> "An activity can come before another activity"@en .
+<https://w3id.org/core-activity-ontology/isBefore> <http://www.w3.org/2000/01/rdf-schema#label> "is before" .
+# 
+# https://w3id.org/core-activity-ontology/isBeneficialTo
+<https://w3id.org/core-activity-ontology/isBeneficialTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/core-activity-ontology/isBeneficialTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/core-activity-ontology/Activity> .
+<https://w3id.org/core-activity-ontology/isBeneficialTo> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/core-activity-ontology/Subject> .
+<https://w3id.org/core-activity-ontology/isBeneficialTo> <http://www.w3.org/2000/01/rdf-schema#comment> "An activity is beneficial to a subject"@en .
+<https://w3id.org/core-activity-ontology/isBeneficialTo> <http://www.w3.org/2000/01/rdf-schema#label> "is beneficial to" .
+# 
+# https://w3id.org/core-activity-ontology/isCarriedOutBy
+<https://w3id.org/core-activity-ontology/isCarriedOutBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/core-activity-ontology/isCarriedOutBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/core-activity-ontology/Activity> .
+<https://w3id.org/core-activity-ontology/isCarriedOutBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/core-activity-ontology/Subject> .
+<https://w3id.org/core-activity-ontology/isCarriedOutBy> <http://www.w3.org/2000/01/rdf-schema#comment> "An activity is carried out by a subject"@en .
+<https://w3id.org/core-activity-ontology/isCarriedOutBy> <http://www.w3.org/2000/01/rdf-schema#label> "is carried out by" .
+# 
+# https://w3id.org/core-activity-ontology/isCarriedOutWith
+<https://w3id.org/core-activity-ontology/isCarriedOutWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/core-activity-ontology/isCarriedOutWith> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/core-activity-ontology/Activity> .
+<https://w3id.org/core-activity-ontology/isCarriedOutWith> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/core-activity-ontology/Resource> .
+<https://w3id.org/core-activity-ontology/isCarriedOutWith> <http://www.w3.org/2000/01/rdf-schema#comment> "A subject uses a resource for an activity"@en .
+<https://w3id.org/core-activity-ontology/isCarriedOutWith> <http://www.w3.org/2000/01/rdf-schema#label> "is carried out with" .
+# 
+# https://w3id.org/core-activity-ontology/isComposedOf
+<https://w3id.org/core-activity-ontology/isComposedOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/core-activity-ontology/isComposedOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<https://w3id.org/core-activity-ontology/isComposedOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/core-activity-ontology/Activity> .
+<https://w3id.org/core-activity-ontology/isComposedOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/core-activity-ontology/Action> .
+<https://w3id.org/core-activity-ontology/isComposedOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/core-activity-ontology/Operation> .
+<https://w3id.org/core-activity-ontology/isComposedOf> <http://www.w3.org/2000/01/rdf-schema#comment> "An activity is composed of actions or operations" .
+<https://w3id.org/core-activity-ontology/isComposedOf> <http://www.w3.org/2000/01/rdf-schema#label> "is composed of" .
+# 
+# https://w3id.org/core-activity-ontology/isMotivatedBy
+<https://w3id.org/core-activity-ontology/isMotivatedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/core-activity-ontology/isMotivatedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/core-activity-ontology/Activity> .
+<https://w3id.org/core-activity-ontology/isMotivatedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/core-activity-ontology/Motive> .
+<https://w3id.org/core-activity-ontology/isMotivatedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "What motivated an activity"@en .
+<https://w3id.org/core-activity-ontology/isMotivatedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is motivated by" .
+# 
+# https://w3id.org/core-activity-ontology/isPartOf
+<https://w3id.org/core-activity-ontology/isPartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/core-activity-ontology/isPartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<https://w3id.org/core-activity-ontology/isPartOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/core-activity-ontology/Activity> .
+<https://w3id.org/core-activity-ontology/isPartOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/core-activity-ontology/Activity> .
+<https://w3id.org/core-activity-ontology/isPartOf> <http://www.w3.org/2000/01/rdf-schema#comment> "An action is part of an Operation"@en .
+<https://w3id.org/core-activity-ontology/isPartOf> <http://www.w3.org/2000/01/rdf-schema#label> "is part of" .
+# 
+# https://w3id.org/core-activity-ontology/isPerformedBy
+<https://w3id.org/core-activity-ontology/isPerformedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/core-activity-ontology/isPerformedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/core-activity-ontology/hasSubject> .
+<https://w3id.org/core-activity-ontology/isPerformedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/core-activity-ontology/Action> .
+<https://w3id.org/core-activity-ontology/isPerformedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/core-activity-ontology/Subject> .
+<https://w3id.org/core-activity-ontology/isPerformedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "A subject performs an operation or an  action"@en .
+<https://w3id.org/core-activity-ontology/isPerformedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is performed by" .
+# 
+# https://w3id.org/core-activity-ontology/isSubjectOf
+<https://w3id.org/core-activity-ontology/isSubjectOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/core-activity-ontology/Subject> .
+<https://w3id.org/core-activity-ontology/isSubjectOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/core-activity-ontology/Activity> .
+<https://w3id.org/core-activity-ontology/isSubjectOf> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/core-activity-ontology/isPartOf> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/core-activity-ontology/carriesOut> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://w3id.org/core-activity-ontology/isSubjectOf> <http://www.w3.org/2000/01/rdf-schema#comment> "A subject that carries out an action or operation of an activity is a subject of this activity" .
+<https://w3id.org/core-activity-ontology/isSubjectOf> <http://www.w3.org/2000/01/rdf-schema#label> "is subject of" .
+# 
+# https://w3id.org/core-activity-ontology/isUsedIn
+<https://w3id.org/core-activity-ontology/isUsedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/core-activity-ontology/isUsedIn> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/core-activity-ontology/isCarriedOutWith> .
+<https://w3id.org/core-activity-ontology/isUsedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/core-activity-ontology/Resource> .
+<https://w3id.org/core-activity-ontology/isUsedIn> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/core-activity-ontology/Activity> .
+<https://w3id.org/core-activity-ontology/isUsedIn> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/core-activity-ontology/isPartOf> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/core-activity-ontology/isUtilizedIn> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://w3id.org/core-activity-ontology/isUsedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "A subject that carries out an action or operation of an activity is a subject of this activity" .
+<https://w3id.org/core-activity-ontology/isUsedIn> <http://www.w3.org/2000/01/rdf-schema#label> "is used in" .
+# 
+# https://w3id.org/core-activity-ontology/isUtilizedIn
+<https://w3id.org/core-activity-ontology/isUtilizedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/core-activity-ontology/isUtilizedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/core-activity-ontology/Resource> .
+<https://w3id.org/core-activity-ontology/isUtilizedIn> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/core-activity-ontology/Action> .
+<https://w3id.org/core-activity-ontology/isUtilizedIn> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/core-activity-ontology/Operation> .
+<https://w3id.org/core-activity-ontology/isUtilizedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "A tool or resource is utilized in an action or operation"@en .
+<https://w3id.org/core-activity-ontology/isUtilizedIn> <http://www.w3.org/2000/01/rdf-schema#label> "is utilized in" .
+# 
+# https://w3id.org/core-activity-ontology/precedes
+<https://w3id.org/core-activity-ontology/precedes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/core-activity-ontology/precedes> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/core-activity-ontology/follows> .
+<https://w3id.org/core-activity-ontology/precedes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://w3id.org/core-activity-ontology/precedes> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/core-activity-ontology/Activity> .
+<https://w3id.org/core-activity-ontology/precedes> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/core-activity-ontology/Activity> .
+<https://w3id.org/core-activity-ontology/precedes> <http://www.w3.org/2000/01/rdf-schema#comment> "An activity precedes another activity"@en .
+<https://w3id.org/core-activity-ontology/precedes> <http://www.w3.org/2000/01/rdf-schema#label> "precedes" .
+# 
+# https://w3id.org/core-activity-ontology/simultaneouslyWith
+<https://w3id.org/core-activity-ontology/simultaneouslyWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/core-activity-ontology/simultaneouslyWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://w3id.org/core-activity-ontology/simultaneouslyWith> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/core-activity-ontology/Activity> .
+<https://w3id.org/core-activity-ontology/simultaneouslyWith> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/core-activity-ontology/Activity> .
+<https://w3id.org/core-activity-ontology/simultaneouslyWith> <http://www.w3.org/2000/01/rdf-schema#comment> "An activity is carried out simultaneously with another activity"@en .
+<https://w3id.org/core-activity-ontology/simultaneouslyWith> <http://www.w3.org/2000/01/rdf-schema#label> "simultaneously with" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/MON/time.owl#inXSDDateTime
+<https://w3id.org/MON/time.owl#inXSDDateTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/MON/time.owl#inXSDDateTime> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRegionDataValue> .
+<https://w3id.org/MON/time.owl#inXSDDateTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/MON/time.owl#inXSDDateTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/MON/time.owl#Instant> .
+<https://w3id.org/MON/time.owl#inXSDDateTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/MON/time.owl#inXSDDateTime> <http://www.w3.org/2000/01/rdf-schema#label> "in XSD date time" .
+# 
+# https://w3id.org/core-activity-ontology/description
+<https://w3id.org/core-activity-ontology/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/core-activity-ontology/description> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/core-activity-ontology/Activity> .
+<https://w3id.org/core-activity-ontology/description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/core-activity-ontology/description> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes the context and boundaries" .
+<https://w3id.org/core-activity-ontology/description> <http://www.w3.org/2000/01/rdf-schema#label> "activity description" .
+# 
+# https://w3id.org/core-activity-ontology/governanceDescription
+<https://w3id.org/core-activity-ontology/governanceDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/core-activity-ontology/governanceDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/core-activity-ontology/Governance> .
+<https://w3id.org/core-activity-ontology/governanceDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/core-activity-ontology/governanceDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "The description of an governance"@en .
+<https://w3id.org/core-activity-ontology/governanceDescription> <http://www.w3.org/2000/01/rdf-schema#label> "governance description" .
+# 
+# https://w3id.org/core-activity-ontology/hasAddress
+<https://w3id.org/core-activity-ontology/hasAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/core-activity-ontology/hasAddress> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/core-activity-ontology/Location> .
+<https://w3id.org/core-activity-ontology/hasAddress> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/core-activity-ontology/hasAddress> <http://www.w3.org/2000/01/rdf-schema#comment> "The address of a location"@en .
+<https://w3id.org/core-activity-ontology/hasAddress> <http://www.w3.org/2000/01/rdf-schema#label> "has address" .
+# 
+# https://w3id.org/core-activity-ontology/hasDuration
+<https://w3id.org/core-activity-ontology/hasDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/core-activity-ontology/hasDuration> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/core-activity-ontology/Activity> .
+<https://w3id.org/core-activity-ontology/hasDuration> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/core-activity-ontology/hasDuration> <http://www.w3.org/2000/01/rdf-schema#comment> "Duration of an activity in hours"@en .
+<https://w3id.org/core-activity-ontology/hasDuration> <http://www.w3.org/2000/01/rdf-schema#label> "has duration" .
+# 
+# https://w3id.org/core-activity-ontology/name
+<https://w3id.org/core-activity-ontology/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/core-activity-ontology/name> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/core-activity-ontology/Activity> .
+<https://w3id.org/core-activity-ontology/name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/core-activity-ontology/name> <http://www.w3.org/2000/01/rdf-schema#comment> "The codified or identifiable name"@en .
+<https://w3id.org/core-activity-ontology/name> <http://www.w3.org/2000/01/rdf-schema#label> "Identification name" .
+# 
+# https://w3id.org/core-activity-ontology/objectDescription
+<https://w3id.org/core-activity-ontology/objectDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/core-activity-ontology/objectDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/core-activity-ontology/Object> .
+<https://w3id.org/core-activity-ontology/objectDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/core-activity-ontology/objectDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "The description of an object"@en .
+<https://w3id.org/core-activity-ontology/objectDescription> <http://www.w3.org/2000/01/rdf-schema#label> "objective description" .
+# 
+# https://w3id.org/core-activity-ontology/ruleDescription
+<https://w3id.org/core-activity-ontology/ruleDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/core-activity-ontology/ruleDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/core-activity-ontology/Rule> .
+<https://w3id.org/core-activity-ontology/ruleDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/core-activity-ontology/ruleDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "The description of a rule"@en .
+<https://w3id.org/core-activity-ontology/ruleDescription> <http://www.w3.org/2000/01/rdf-schema#label> "rule description" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/MON/time.owl#Instant
+<https://w3id.org/MON/time.owl#Instant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/MON/time.owl#Instant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/MON/time.owl#Interval> .
+<https://w3id.org/MON/time.owl#Instant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#dateTime> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/MON/time.owl#inXSDDateTime> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/MON/time.owl#Instant> <http://www.w3.org/2000/01/rdf-schema#comment> "A very short segment of time."@en .
+<https://w3id.org/MON/time.owl#Instant> <http://www.w3.org/2000/01/rdf-schema#label> "Instant"@en .
+# 
+# https://w3id.org/MON/time.owl#Interval
+<https://w3id.org/MON/time.owl#Interval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/MON/time.owl#Interval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/MON/time.owl#TemporalEntity> .
+<https://w3id.org/MON/time.owl#Interval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/MON/time.owl#Instant> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/MON/time.owl#hasBeginning> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/MON/time.owl#Interval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/MON/time.owl#Instant> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/MON/time.owl#hasEnd> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/MON/time.owl#Interval> <http://www.w3.org/2000/01/rdf-schema#comment> "A segment of time."@en .
+<https://w3id.org/MON/time.owl#Interval> <http://www.w3.org/2000/01/rdf-schema#label> "Interval"@en .
+# 
+# https://w3id.org/MON/time.owl#TemporalEntity
+<https://w3id.org/MON/time.owl#TemporalEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/MON/time.owl#TemporalEntity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#TimeInterval> .
+<https://w3id.org/MON/time.owl#TemporalEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents any entity describing a time period."@en .
+<https://w3id.org/MON/time.owl#TemporalEntity> <http://www.w3.org/2000/01/rdf-schema#label> "Temporal entity"@en .
+# 
+# https://w3id.org/core-activity-ontology/Action
+<https://w3id.org/core-activity-ontology/Action> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/core-activity-ontology/Action> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/core-activity-ontology/Activity> .
+<https://w3id.org/core-activity-ontology/Action> <http://www.w3.org/2000/01/rdf-schema#comment> "A clearly defined and specific task performed as part of an activity."@en .
+<https://w3id.org/core-activity-ontology/Action> <http://www.w3.org/2000/01/rdf-schema#label> "Action" .
+# 
+# https://w3id.org/core-activity-ontology/Activity
+<https://w3id.org/core-activity-ontology/Activity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/core-activity-ontology/Activity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<https://w3id.org/core-activity-ontology/Activity> <http://www.w3.org/2000/01/rdf-schema#label> "Activity" .
+<https://w3id.org/core-activity-ontology/Activity> <http://www.w3.org/2004/02/skos/core#definition> "An action directed to an object, carried out by an agent not necessarily conscious. An activity can be made up of other activities or tasks"@en .
+# 
+# https://w3id.org/core-activity-ontology/Constraint
+<https://w3id.org/core-activity-ontology/Constraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/core-activity-ontology/Constraint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/core-activity-ontology/Rule> .
+<https://w3id.org/core-activity-ontology/Constraint> <http://www.w3.org/2000/01/rdf-schema#comment> "A constraint is a hard rule that impede an activity"@en .
+<https://w3id.org/core-activity-ontology/Constraint> <http://www.w3.org/2000/01/rdf-schema#label> "Constraint" .
+# 
+# https://w3id.org/core-activity-ontology/Goal
+<https://w3id.org/core-activity-ontology/Goal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/core-activity-ontology/Goal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/core-activity-ontology/Governance> .
+<https://w3id.org/core-activity-ontology/Goal> <http://www.w3.org/2000/01/rdf-schema#comment> " The goal of an activity"@en .
+<https://w3id.org/core-activity-ontology/Goal> <http://www.w3.org/2000/01/rdf-schema#label> "Goal" .
+# 
+# https://w3id.org/core-activity-ontology/Governance
+<https://w3id.org/core-activity-ontology/Governance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/core-activity-ontology/Governance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<https://w3id.org/core-activity-ontology/Governance> <http://www.w3.org/2000/01/rdf-schema#comment> "Principles that guide activities run up"@en .
+<https://w3id.org/core-activity-ontology/Governance> <http://www.w3.org/2000/01/rdf-schema#label> "Governance" .
+# 
+# https://w3id.org/core-activity-ontology/HardResource
+<https://w3id.org/core-activity-ontology/HardResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/core-activity-ontology/HardResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/core-activity-ontology/Resource> .
+<https://w3id.org/core-activity-ontology/HardResource> <http://www.w3.org/2000/01/rdf-schema#comment> "Resources that have physical existance"@en .
+<https://w3id.org/core-activity-ontology/HardResource> <http://www.w3.org/2000/01/rdf-schema#label> "Tangible resource" .
+# 
+# https://w3id.org/core-activity-ontology/Location
+<https://w3id.org/core-activity-ontology/Location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/core-activity-ontology/Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<https://w3id.org/core-activity-ontology/Location> <http://www.w3.org/2000/01/rdf-schema#comment> "A geographical location or places"@en .
+<https://w3id.org/core-activity-ontology/Location> <http://www.w3.org/2000/01/rdf-schema#label> "Location" .
+# 
+# https://w3id.org/core-activity-ontology/Motive
+<https://w3id.org/core-activity-ontology/Motive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/core-activity-ontology/Motive> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/core-activity-ontology/Governance> .
+<https://w3id.org/core-activity-ontology/Motive> <http://www.w3.org/2000/01/rdf-schema#comment> " The motivation behind an activity"@en .
+<https://w3id.org/core-activity-ontology/Motive> <http://www.w3.org/2000/01/rdf-schema#label> "Motive" .
+# 
+# https://w3id.org/core-activity-ontology/Object
+<https://w3id.org/core-activity-ontology/Object> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/core-activity-ontology/Object> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/core-activity-ontology/Governance> .
+<https://w3id.org/core-activity-ontology/Object> <http://www.w3.org/2000/01/rdf-schema#comment> "Objective leading to outcome "@en .
+<https://w3id.org/core-activity-ontology/Object> <http://www.w3.org/2000/01/rdf-schema#label> "Object" .
+# 
+# https://w3id.org/core-activity-ontology/Operation
+<https://w3id.org/core-activity-ontology/Operation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/core-activity-ontology/Operation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/core-activity-ontology/Activity> .
+<https://w3id.org/core-activity-ontology/Operation> <http://www.w3.org/2000/01/rdf-schema#comment> "An operation is a work performed by an agent"@en .
+<https://w3id.org/core-activity-ontology/Operation> <http://www.w3.org/2000/01/rdf-schema#label> "Operation" .
+# 
+# https://w3id.org/core-activity-ontology/Resource
+<https://w3id.org/core-activity-ontology/Resource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/core-activity-ontology/Resource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<https://w3id.org/core-activity-ontology/Resource> <http://www.w3.org/2000/01/rdf-schema#comment> "The tool used to carry out an activity"@en .
+<https://w3id.org/core-activity-ontology/Resource> <http://www.w3.org/2000/01/rdf-schema#label> "Tool" .
+# 
+# https://w3id.org/core-activity-ontology/Rule
+<https://w3id.org/core-activity-ontology/Rule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/core-activity-ontology/Rule> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/core-activity-ontology/Governance> .
+<https://w3id.org/core-activity-ontology/Rule> <http://www.w3.org/2000/01/rdf-schema#comment> "The rule that governs an activity"@en .
+<https://w3id.org/core-activity-ontology/Rule> <http://www.w3.org/2000/01/rdf-schema#label> "Rule" .
+# 
+# https://w3id.org/core-activity-ontology/SoftResource
+<https://w3id.org/core-activity-ontology/SoftResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/core-activity-ontology/SoftResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/core-activity-ontology/Resource> .
+<https://w3id.org/core-activity-ontology/SoftResource> <http://www.w3.org/2000/01/rdf-schema#comment> "Resources not physically tangible"@en .
+<https://w3id.org/core-activity-ontology/SoftResource> <http://www.w3.org/2000/01/rdf-schema#label> "Intangible resource" .
+# 
+# https://w3id.org/core-activity-ontology/Subject
+<https://w3id.org/core-activity-ontology/Subject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/core-activity-ontology/Subject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<https://w3id.org/core-activity-ontology/Subject> <http://www.w3.org/2000/01/rdf-schema#comment> "An agent that carries out an activity"@en .
+<https://w3id.org/core-activity-ontology/Subject> <http://www.w3.org/2000/01/rdf-schema#label> "Agent" .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
