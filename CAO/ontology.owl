@@ -1,0 +1,797 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/core-activity-ontology/"
+     xml:base="https://w3id.org/core-activity-ontology/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://w3id.org/core-activity-ontology/">
+        <owl:imports rdf:resource="https://w3id.org/MON/time.owl"/>
+        <dc:description xml:lang="en">This ontology defines core concepts and their relations to represent activities knowledge within an organization.</dc:description>
+        <dc:licence>https://creativecommons.org/licenses/by/4.0/</dc:licence>
+        <dc:title>Core Activity Ontology</dc:title>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-12-15</terms:created>
+        <terms:creator rdf:resource="https://orcid.org/0000-0002-6085-6818"/>
+        <terms:creator rdf:resource="mailto:sss.sonfack@gmail.com"/>
+        <terms:creator rdf:resource="mailto:sss.sounchio@gmail.com"/>
+        <rdfs:label>CAO</rdfs:label>
+        <owl:versionInfo>1.1</owl:versionInfo>
+        <skos:changeNote xml:lang="en">2024-06-29 change # to / and revision of temporality management</skos:changeNote>
+        <skos:changeNote xml:lang="en">2024-07-03 use and import https://w3id.org/MON/time.owl time ontology which is a reduced version of the owl time ontology</skos:changeNote>
+        <skos:changeNote xml:lang="en">2025-09-07 changing the private namespace to a public namespace from w3id</skos:changeNote>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/licence -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/licence"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#changeNote -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#changeNote"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/MON/time.owl#atTime -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/MON/time.owl#atTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRegion"/>
+        <rdfs:range rdf:resource="https://w3id.org/MON/time.owl#TemporalEntity"/>
+        <rdfs:comment xml:lang="en">It associates something with a temporal entity (for any reason).</rdfs:comment>
+        <rdfs:label xml:lang="en">at time</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/MON/time.owl#hasBeginning -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/MON/time.owl#hasBeginning">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRegion"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/MON/time.owl#Interval"/>
+        <rdfs:range rdf:resource="https://w3id.org/MON/time.owl#Instant"/>
+        <rdfs:comment xml:lang="en">It associates an Interval with the Instant when it begins.</rdfs:comment>
+        <rdfs:label xml:lang="en">has beginning</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/MON/time.owl#hasEnd -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/MON/time.owl#hasEnd">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRegion"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/MON/time.owl#Interval"/>
+        <rdfs:range rdf:resource="https://w3id.org/MON/time.owl#Instant"/>
+        <rdfs:comment xml:lang="en">It associates an Interval with the Instant when it ends.</rdfs:comment>
+        <rdfs:label xml:lang="en">has end</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/core-activity-ontology/carriesOut -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/core-activity-ontology/carriesOut">
+        <owl:inverseOf rdf:resource="https://w3id.org/core-activity-ontology/isCarriedOutBy"/>
+        <rdfs:domain rdf:resource="https://w3id.org/core-activity-ontology/Subject"/>
+        <rdfs:range rdf:resource="https://w3id.org/core-activity-ontology/Activity"/>
+        <rdfs:comment xml:lang="en">A subject carries out an action or operations</rdfs:comment>
+        <rdfs:label>carries out</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/core-activity-ontology/follows -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/core-activity-ontology/follows">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/core-activity-ontology/Activity"/>
+        <rdfs:range rdf:resource="https://w3id.org/core-activity-ontology/Activity"/>
+        <rdfs:comment xml:lang="en">An activity follows another activity</rdfs:comment>
+        <rdfs:label>follows</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/core-activity-ontology/hasBeginTime -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/core-activity-ontology/hasBeginTime">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/core-activity-ontology/hasTime"/>
+        <rdfs:domain rdf:resource="https://w3id.org/core-activity-ontology/Activity"/>
+        <rdfs:range rdf:resource="https://w3id.org/MON/time.owl#Instant"/>
+        <rdfs:comment xml:lang="en">An activity, an action or and operation has be begining time</rdfs:comment>
+        <rdfs:label>has beginning time</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/core-activity-ontology/hasConstraint -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/core-activity-ontology/hasConstraint">
+        <rdfs:domain rdf:resource="https://w3id.org/core-activity-ontology/Activity"/>
+        <rdfs:range rdf:resource="https://w3id.org/core-activity-ontology/Constraint"/>
+        <rdfs:comment xml:lang="en">An activity has a constraint</rdfs:comment>
+        <rdfs:label>has constraint</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/core-activity-ontology/hasEndTime -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/core-activity-ontology/hasEndTime">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/core-activity-ontology/hasTime"/>
+        <rdfs:domain rdf:resource="https://w3id.org/core-activity-ontology/Activity"/>
+        <rdfs:range rdf:resource="https://w3id.org/MON/time.owl#Instant"/>
+        <rdfs:comment xml:lang="en">An activity, an action or and operation has an end time</rdfs:comment>
+        <rdfs:label>has end time</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/core-activity-ontology/hasGoal -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/core-activity-ontology/hasGoal">
+        <rdfs:domain rdf:resource="https://w3id.org/core-activity-ontology/Action"/>
+        <rdfs:range rdf:resource="https://w3id.org/core-activity-ontology/Goal"/>
+        <rdfs:comment xml:lang="en">An action has a goal</rdfs:comment>
+        <rdfs:label>has goal</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/core-activity-ontology/hasLocation -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/core-activity-ontology/hasLocation">
+        <rdfs:domain rdf:resource="https://w3id.org/core-activity-ontology/Activity"/>
+        <rdfs:range rdf:resource="https://w3id.org/core-activity-ontology/Location"/>
+        <rdfs:comment xml:lang="en">Links a domain to a geographical position</rdfs:comment>
+        <rdfs:label>has location</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/core-activity-ontology/hasObjective -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/core-activity-ontology/hasObjective">
+        <rdfs:domain rdf:resource="https://w3id.org/core-activity-ontology/Activity"/>
+        <rdfs:range rdf:resource="https://w3id.org/core-activity-ontology/Object"/>
+        <rdfs:comment xml:lang="en">The outcome of an activity</rdfs:comment>
+        <rdfs:label>has object</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/core-activity-ontology/hasRule -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/core-activity-ontology/hasRule">
+        <rdfs:domain rdf:resource="https://w3id.org/core-activity-ontology/Activity"/>
+        <rdfs:range rdf:resource="https://w3id.org/core-activity-ontology/Rule"/>
+        <rdfs:comment xml:lang="en">An activity is governed by a rule</rdfs:comment>
+        <rdfs:label>has rule</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/core-activity-ontology/hasSubject -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/core-activity-ontology/hasSubject">
+        <owl:inverseOf rdf:resource="https://w3id.org/core-activity-ontology/isSubjectOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/core-activity-ontology/Activity"/>
+        <rdfs:range rdf:resource="https://w3id.org/core-activity-ontology/Subject"/>
+        <rdfs:comment xml:lang="en">A subject carries out an activity</rdfs:comment>
+        <rdfs:label>has subject</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/core-activity-ontology/hasTime -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/core-activity-ontology/hasTime">
+        <rdfs:domain rdf:resource="https://w3id.org/core-activity-ontology/Activity"/>
+        <rdfs:range rdf:resource="https://w3id.org/MON/time.owl#Interval"/>
+        <rdfs:comment xml:lang="en">An activity, action  has a time corresponding to when it started</rdfs:comment>
+        <rdfs:label xml:lang="en">has time</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/core-activity-ontology/isAfter -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/core-activity-ontology/isAfter">
+        <owl:inverseOf rdf:resource="https://w3id.org/core-activity-ontology/isBefore"/>
+        <rdfs:domain rdf:resource="https://w3id.org/core-activity-ontology/Activity"/>
+        <rdfs:range rdf:resource="https://w3id.org/MON/time.owl#Instant"/>
+        <rdfs:range rdf:resource="https://w3id.org/core-activity-ontology/Activity"/>
+        <rdfs:comment xml:lang="en">An activity can come after another activity</rdfs:comment>
+        <rdfs:label>is after</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/core-activity-ontology/isBefore -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/core-activity-ontology/isBefore">
+        <rdfs:domain rdf:resource="https://w3id.org/core-activity-ontology/Activity"/>
+        <rdfs:range rdf:resource="https://w3id.org/MON/time.owl#Instant"/>
+        <rdfs:range rdf:resource="https://w3id.org/core-activity-ontology/Activity"/>
+        <rdfs:comment xml:lang="en">An activity can come before another activity</rdfs:comment>
+        <rdfs:label>is before</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/core-activity-ontology/isBeneficialTo -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/core-activity-ontology/isBeneficialTo">
+        <rdfs:domain rdf:resource="https://w3id.org/core-activity-ontology/Activity"/>
+        <rdfs:range rdf:resource="https://w3id.org/core-activity-ontology/Subject"/>
+        <rdfs:comment xml:lang="en">An activity is beneficial to a subject</rdfs:comment>
+        <rdfs:label>is beneficial to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/core-activity-ontology/isCarriedOutBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/core-activity-ontology/isCarriedOutBy">
+        <rdfs:domain rdf:resource="https://w3id.org/core-activity-ontology/Activity"/>
+        <rdfs:range rdf:resource="https://w3id.org/core-activity-ontology/Subject"/>
+        <rdfs:comment xml:lang="en">An activity is carried out by a subject</rdfs:comment>
+        <rdfs:label>is carried out by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/core-activity-ontology/isCarriedOutWith -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/core-activity-ontology/isCarriedOutWith">
+        <rdfs:domain rdf:resource="https://w3id.org/core-activity-ontology/Activity"/>
+        <rdfs:range rdf:resource="https://w3id.org/core-activity-ontology/Resource"/>
+        <rdfs:comment xml:lang="en">A subject uses a resource for an activity</rdfs:comment>
+        <rdfs:label>is carried out with</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/core-activity-ontology/isComposedOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/core-activity-ontology/isComposedOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/core-activity-ontology/Activity"/>
+        <rdfs:range rdf:resource="https://w3id.org/core-activity-ontology/Action"/>
+        <rdfs:range rdf:resource="https://w3id.org/core-activity-ontology/Operation"/>
+        <rdfs:comment>An activity is composed of actions or operations</rdfs:comment>
+        <rdfs:label>is composed of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/core-activity-ontology/isMotivatedBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/core-activity-ontology/isMotivatedBy">
+        <rdfs:domain rdf:resource="https://w3id.org/core-activity-ontology/Activity"/>
+        <rdfs:range rdf:resource="https://w3id.org/core-activity-ontology/Motive"/>
+        <rdfs:comment xml:lang="en">What motivated an activity</rdfs:comment>
+        <rdfs:label>is motivated by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/core-activity-ontology/isPartOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/core-activity-ontology/isPartOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/core-activity-ontology/Activity"/>
+        <rdfs:range rdf:resource="https://w3id.org/core-activity-ontology/Activity"/>
+        <rdfs:comment xml:lang="en">An action is part of an Operation</rdfs:comment>
+        <rdfs:label>is part of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/core-activity-ontology/isPerformedBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/core-activity-ontology/isPerformedBy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/core-activity-ontology/hasSubject"/>
+        <rdfs:domain rdf:resource="https://w3id.org/core-activity-ontology/Action"/>
+        <rdfs:range rdf:resource="https://w3id.org/core-activity-ontology/Subject"/>
+        <rdfs:comment xml:lang="en">A subject performs an operation or an  action</rdfs:comment>
+        <rdfs:label>is performed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/core-activity-ontology/isSubjectOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/core-activity-ontology/isSubjectOf">
+        <rdfs:domain rdf:resource="https://w3id.org/core-activity-ontology/Subject"/>
+        <rdfs:range rdf:resource="https://w3id.org/core-activity-ontology/Activity"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/core-activity-ontology/carriesOut"/>
+            <rdf:Description rdf:about="https://w3id.org/core-activity-ontology/isPartOf"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment>A subject that carries out an action or operation of an activity is a subject of this activity</rdfs:comment>
+        <rdfs:label>is subject of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/core-activity-ontology/isUsedIn -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/core-activity-ontology/isUsedIn">
+        <owl:inverseOf rdf:resource="https://w3id.org/core-activity-ontology/isCarriedOutWith"/>
+        <rdfs:domain rdf:resource="https://w3id.org/core-activity-ontology/Resource"/>
+        <rdfs:range rdf:resource="https://w3id.org/core-activity-ontology/Activity"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/core-activity-ontology/isUtilizedIn"/>
+            <rdf:Description rdf:about="https://w3id.org/core-activity-ontology/isPartOf"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment>A subject that carries out an action or operation of an activity is a subject of this activity</rdfs:comment>
+        <rdfs:label>is used in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/core-activity-ontology/isUtilizedIn -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/core-activity-ontology/isUtilizedIn">
+        <rdfs:domain rdf:resource="https://w3id.org/core-activity-ontology/Resource"/>
+        <rdfs:range rdf:resource="https://w3id.org/core-activity-ontology/Action"/>
+        <rdfs:range rdf:resource="https://w3id.org/core-activity-ontology/Operation"/>
+        <rdfs:comment xml:lang="en">A tool or resource is utilized in an action or operation</rdfs:comment>
+        <rdfs:label>is utilized in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/core-activity-ontology/precedes -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/core-activity-ontology/precedes">
+        <owl:inverseOf rdf:resource="https://w3id.org/core-activity-ontology/follows"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/core-activity-ontology/Activity"/>
+        <rdfs:range rdf:resource="https://w3id.org/core-activity-ontology/Activity"/>
+        <rdfs:comment xml:lang="en">An activity precedes another activity</rdfs:comment>
+        <rdfs:label>precedes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/core-activity-ontology/simultaneouslyWith -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/core-activity-ontology/simultaneouslyWith">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/core-activity-ontology/Activity"/>
+        <rdfs:range rdf:resource="https://w3id.org/core-activity-ontology/Activity"/>
+        <rdfs:comment xml:lang="en">An activity is carried out simultaneously with another activity</rdfs:comment>
+        <rdfs:label>simultaneously with</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/MON/time.owl#inXSDDateTime -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/MON/time.owl#inXSDDateTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRegionDataValue"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/MON/time.owl#Instant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label>in XSD date time</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/core-activity-ontology/description -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/core-activity-ontology/description">
+        <rdfs:domain rdf:resource="https://w3id.org/core-activity-ontology/Activity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Describes the context and boundaries</rdfs:comment>
+        <rdfs:label>activity description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/core-activity-ontology/governanceDescription -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/core-activity-ontology/governanceDescription">
+        <rdfs:domain rdf:resource="https://w3id.org/core-activity-ontology/Governance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The description of an governance</rdfs:comment>
+        <rdfs:label>governance description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/core-activity-ontology/hasAddress -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/core-activity-ontology/hasAddress">
+        <rdfs:domain rdf:resource="https://w3id.org/core-activity-ontology/Location"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The address of a location</rdfs:comment>
+        <rdfs:label>has address</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/core-activity-ontology/hasDuration -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/core-activity-ontology/hasDuration">
+        <rdfs:domain rdf:resource="https://w3id.org/core-activity-ontology/Activity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Duration of an activity in hours</rdfs:comment>
+        <rdfs:label>has duration</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/core-activity-ontology/name -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/core-activity-ontology/name">
+        <rdfs:domain rdf:resource="https://w3id.org/core-activity-ontology/Activity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The codified or identifiable name</rdfs:comment>
+        <rdfs:label>Identification name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/core-activity-ontology/objectDescription -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/core-activity-ontology/objectDescription">
+        <rdfs:domain rdf:resource="https://w3id.org/core-activity-ontology/Object"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The description of an object</rdfs:comment>
+        <rdfs:label>objective description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/core-activity-ontology/ruleDescription -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/core-activity-ontology/ruleDescription">
+        <rdfs:domain rdf:resource="https://w3id.org/core-activity-ontology/Rule"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The description of a rule</rdfs:comment>
+        <rdfs:label>rule description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/MON/time.owl#Instant -->
+
+
+    <owl:Class rdf:about="https://w3id.org/MON/time.owl#Instant">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/MON/time.owl#Interval"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/MON/time.owl#inXSDDateTime"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A very short segment of time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Instant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/MON/time.owl#Interval -->
+
+
+    <owl:Class rdf:about="https://w3id.org/MON/time.owl#Interval">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/MON/time.owl#TemporalEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/MON/time.owl#hasBeginning"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/MON/time.owl#Instant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/MON/time.owl#hasEnd"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/MON/time.owl#Instant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A segment of time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Interval</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/MON/time.owl#TemporalEntity -->
+
+
+    <owl:Class rdf:about="https://w3id.org/MON/time.owl#TemporalEntity">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#TimeInterval"/>
+        <rdfs:comment xml:lang="en">This class represents any entity describing a time period.</rdfs:comment>
+        <rdfs:label xml:lang="en">Temporal entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/core-activity-ontology/Action -->
+
+
+    <owl:Class rdf:about="https://w3id.org/core-activity-ontology/Action">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/core-activity-ontology/Activity"/>
+        <rdfs:comment xml:lang="en">A clearly defined and specific task performed as part of an activity.</rdfs:comment>
+        <rdfs:label>Action</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/core-activity-ontology/Activity -->
+
+
+    <owl:Class rdf:about="https://w3id.org/core-activity-ontology/Activity">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label>Activity</rdfs:label>
+        <skos:definition xml:lang="en">An action directed to an object, carried out by an agent not necessarily conscious. An activity can be made up of other activities or tasks</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/core-activity-ontology/Constraint -->
+
+
+    <owl:Class rdf:about="https://w3id.org/core-activity-ontology/Constraint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/core-activity-ontology/Rule"/>
+        <rdfs:comment xml:lang="en">A constraint is a hard rule that impede an activity</rdfs:comment>
+        <rdfs:label>Constraint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/core-activity-ontology/Goal -->
+
+
+    <owl:Class rdf:about="https://w3id.org/core-activity-ontology/Goal">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/core-activity-ontology/Governance"/>
+        <rdfs:comment xml:lang="en"> The goal of an activity</rdfs:comment>
+        <rdfs:label>Goal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/core-activity-ontology/Governance -->
+
+
+    <owl:Class rdf:about="https://w3id.org/core-activity-ontology/Governance">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">Principles that guide activities run up</rdfs:comment>
+        <rdfs:label>Governance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/core-activity-ontology/HardResource -->
+
+
+    <owl:Class rdf:about="https://w3id.org/core-activity-ontology/HardResource">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/core-activity-ontology/Resource"/>
+        <rdfs:comment xml:lang="en">Resources that have physical existance</rdfs:comment>
+        <rdfs:label>Tangible resource</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/core-activity-ontology/Location -->
+
+
+    <owl:Class rdf:about="https://w3id.org/core-activity-ontology/Location">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">A geographical location or places</rdfs:comment>
+        <rdfs:label>Location</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/core-activity-ontology/Motive -->
+
+
+    <owl:Class rdf:about="https://w3id.org/core-activity-ontology/Motive">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/core-activity-ontology/Governance"/>
+        <rdfs:comment xml:lang="en"> The motivation behind an activity</rdfs:comment>
+        <rdfs:label>Motive</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/core-activity-ontology/Object -->
+
+
+    <owl:Class rdf:about="https://w3id.org/core-activity-ontology/Object">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/core-activity-ontology/Governance"/>
+        <rdfs:comment xml:lang="en">Objective leading to outcome </rdfs:comment>
+        <rdfs:label>Object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/core-activity-ontology/Operation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/core-activity-ontology/Operation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/core-activity-ontology/Activity"/>
+        <rdfs:comment xml:lang="en">An operation is a work performed by an agent</rdfs:comment>
+        <rdfs:label>Operation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/core-activity-ontology/Resource -->
+
+
+    <owl:Class rdf:about="https://w3id.org/core-activity-ontology/Resource">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">The tool used to carry out an activity</rdfs:comment>
+        <rdfs:label>Tool</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/core-activity-ontology/Rule -->
+
+
+    <owl:Class rdf:about="https://w3id.org/core-activity-ontology/Rule">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/core-activity-ontology/Governance"/>
+        <rdfs:comment xml:lang="en">The rule that governs an activity</rdfs:comment>
+        <rdfs:label>Rule</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/core-activity-ontology/SoftResource -->
+
+
+    <owl:Class rdf:about="https://w3id.org/core-activity-ontology/SoftResource">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/core-activity-ontology/Resource"/>
+        <rdfs:comment xml:lang="en">Resources not physically tangible</rdfs:comment>
+        <rdfs:label>Intangible resource</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/core-activity-ontology/Subject -->
+
+
+    <owl:Class rdf:about="https://w3id.org/core-activity-ontology/Subject">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">An agent that carries out an activity</rdfs:comment>
+        <rdfs:label>Agent</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
